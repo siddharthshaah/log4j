@@ -1,0 +1,52 @@
+What is logging, what is the purpose of logging?
+Logging is used across various stages of delivery of the application
+#1. during the development time for debugging the logical errors in the program, the programmer relies on the intermediate log output 
+#2. within the test, stage & prod environments to identify and debug the errors that will creepup during the runtime of the application the logging is very critical. if we never see the errors, we never get a chance to fix them, so that we can never improve the quanlity of the application
+
+characteristics or requirements of logging
+1. The log statements written should be turned off/on depends-on the environment where our application is running
+2. The logging should be persisted and should be able to use it at later point of time
+3. The log statements should be written to multiple destinations seemlessly. for eg.. console, file, db or mqservers etc. similarly different levels of logs should be written in different places like info, debug, warn into one file and error, severe in another file to easily distinghuish
+4. The log statements written should be sequentially in the order in which those are writen and should be thread-safe in multi-threaded/concurrent env
+5. The log messages should be formatted nicely, so that we should be able to read them easily
+
+There are several frameworks introduced by 3rd parties in writing the logging within the java application few of them are 
+1. java logging api (java api)
+2. log4j
+3. commons-logging
+4. sl4j
+5. log4j2
+6. logback
+
+more are less, most of these frameworks are similar in nature and provided api capabilities in writing the log statements.
+	
+sl4j, common-logging from others
+while working with log4j, log4j2 or logback our application will be tightly coupled with those corresponding libraries and we cannot switch from on logging library to another, instead sl4j and common-logging has provided api, integrations with third-party libraries (log4j2, logback), so that without modifying the code we can change the underlying logging engines
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
